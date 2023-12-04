@@ -1,20 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
 
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
 
-  <title>Document</title>
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Doc of my Api:</h1>
-    <div>Right now i have nothing....</div>
-  </div>
+
+    <h2>Toys API Documentation</h2>
+
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Endpoint</th>
+            <th>Description</th>
+            <th>Request Body Fields</th>
+            <th>Query Parameters</th>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/toys</td>
+            <td>Get a paginated list of toys</td>
+            <td>-</td>
+            <td>perPage (optional), page</td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/toys/search</td>
+            <td>Search for toys based on a query string</td>
+            <td>-</td>
+            <td>s (search query)</td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/toys/category/:catName</td>
+            <td>Get toys by category</td>
+            <td>-</td>
+            <td>catName (category name)</td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/toys/single/:id</td>
+            <td>Get a single toy by ID</td>
+            <td>-</td>
+            <td>id (toy ID)</td>
+        </tr>
+        <tr>
+            <td>POST</td>
+            <td>/toys</td>
+            <td>Create a new toy</td>
+            <td>name, info, category, img_url, price</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>PUT</td>
+            <td>/toys/:editId</td>
+            <td>Edit a toy</td>
+            <td>name, info, category, img_url, price</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>DELETE</td>
+            <td>/toys/:delId</td>
+            <td>Delete a toy</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+    </table>
+
+    <h2>User API Documentation</h2>
+
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Endpoint</th>
+            <th>Description</th>
+            <th>Request Body Fields</th>
+            <th>Query Parameters</th>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/users</td>
+            <td>Get a message indicating that users work</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/users/myInfo</td>
+            <td>Get user information based on the token</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/users/usersList</td>
+            <td>Get a list of all users (admin only)</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>POST</td>
+            <td>/users</td>
+            <td>Create a new user</td>
+            <td>name, email, password</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>POST</td>
+            <td>/users/login</td>
+            <td>User login</td>
+            <td>email, password</td>
+            <td>-</td>
+        </tr>
+    </table>
+    
 </body>
 </html>
-
-<!-- ניתן לייצר את הדוקומנטציה כאן -->
